@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+    <element label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="1" type="collection">
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Request type" max_length="40" name="request_type" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="-- New choice --" sequence="0" value="-- New choice --"/>
+                <element inactive_on_update="false" label="Facilities" sequence="0" value="facilities"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="1" value="human resources"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+            </choice>
+        </element>
+        <element choice="1" label="What needed" max_length="40" name="what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
     </element>
 </database>
